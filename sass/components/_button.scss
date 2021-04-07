@@ -1,0 +1,37 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-weight: $weight--700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 2px;
+
+    &__bg{
+      background-color: $color-black;
+      color: $color-white
+    }
+    &__border{
+      border-radius: 10rem;
+    }
+    &__pd{
+      padding: 1rem 2rem;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+    }
+  }
+}

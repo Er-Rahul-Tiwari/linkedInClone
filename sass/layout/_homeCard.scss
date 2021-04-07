@@ -1,0 +1,8 @@
+.homeCard {
+    grid-column: col-start 2 / col-end 5;
+
+    display: grid;
+    grid-row-gap: 2rem;
+
+    margin-bottom: 5rem;
+}

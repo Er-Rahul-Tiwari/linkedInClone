@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 10px/16px ,62.5% mean 1rem=10px
+  box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-size: $font--16;
+  font-family: $display--display;
+  font-weight: $weight--300;
+  color: $color-7;
+  background-color: $color-f2;
+  line-height: 1.7;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 5rem  repeat(5,min-content);
+  grid-template-columns:
+  [full-start] minmax(6rem, 1fr) [center-start] repeat(
+    8,
+    [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+    
+    @media only screen and (max-width: $bp-large){
+      // grid-template-rows: 6rem calc(100vh - 6rem) repeat(2,min-content);
+
+    }
+}
+
+.detail{
+  display: grid;
+  grid-template-rows: 6rem repeat(3,min-content);
+  grid-template-columns:
+  [full-start] minmax(6rem, 1fr) [center-start] repeat(
+    8,
+    [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+}
